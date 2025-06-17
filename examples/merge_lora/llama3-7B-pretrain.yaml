@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: EleutherAI/llemma_7b
+adapter_name_or_path: /u/jhu11/hdd/saves/llemma-7b/lora/pretrain
+template: llama3
+trust_remote_code: true
+
+### export
+export_dir: /u/jhu11/hdd/output/llama_7b_lora_pretrain
+export_size: 5
+export_device: gpu
+export_legacy_format: false

@@ -1,0 +1,14 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: Qwen/Qwen2.5-Coder-14B
+adapter_name_or_path: /projects/bdkg/jhu11/saves/qwen2.5-coder-14b-3epoch-r32-e5-isar-sorry/lora/sft
+template: qwen
+trust_remote_code: true
+finetuning_type: lora
+
+### export
+export_dir: /work/hdd/bdkg/jhu11/output/qwen2.5_coder_14b_3e_r32_e5_isar_sorry_lora_sft
+export_size: 5
+export_device: gpu
+export_legacy_format: false

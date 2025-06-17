@@ -1,0 +1,46 @@
+### model
+model_name_or_path: Qwen/Qwen2.5-Coder-7B
+#model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_target: all
+
+### dataset
+dataset: std_premises
+template: qwen
+cutoff_len: 2048
+max_samples: 50000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: /projects/bdkg/jhu11/saves/qwen2.5-coder-7b-3epoch-r16-e5/lora/sft
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+eval_dataset: std_premises_evaluation
+### val_size: 0.1
+per_device_eval_batch_size: 2
+eval_strategy: steps
+eval_steps: 250

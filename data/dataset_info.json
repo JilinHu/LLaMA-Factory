@@ -1,4 +1,121 @@
 {
+  "std_premises": {
+    "file_name": "/u/jhu11/dataset/modified_premises.json",
+    "columns": {
+      "prompt" : "prompt",
+      "query" : "problem_name",
+      "response": "proof"
+    }
+  },
+  "std_premises_evaluation": {
+    "file_name": "/u/jhu11/dataset/modified_premises_evaluation.json",
+    "columns": {
+      "prompt" : "prompt",
+      "query" : "problem_name",
+      "response": "proof"
+    }
+  },
+  "std_premises_with_pre_label": {
+    "file_name": "/u/jhu11/dataset/modified_premises_with_pre_label.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "std_premises_evaluation_with_pre_label": {
+    "file_name": "/u/jhu11/dataset/modified_premises_evaluation_with_pre_label.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "std_premises_sys": {
+    "file_name": "/u/jhu11/dataset/modified_premises_sys_prompt.json",
+    "columns": {
+      "prompt" : "prompt",
+      "system" : "sys_prompt",
+      "response": "proof"
+    }
+  },
+  "std_premises_evaluation_sys": {
+    "file_name": "/u/jhu11/dataset/modified_premises_evaluation_sys_prompt.json",
+    "columns": {
+      "prompt" : "prompt",
+      "system" : "sys_prompt",
+      "response": "proof"
+    }
+  },
+
+  "proof_pile_2_for_proof_synthesis": {
+    "hf_hub_url": "JilinHu/proof-synthesis-pretraining",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+
+  "proof_pile_2_for_specification_synthesis": {
+    "hf_hub_url": "JilinHu/extracted-proof-pile-2",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "std_apply_premises": {
+    "file_name": "/u/jhu11/dataset/std_apply_premises.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "std_isar_premises": {
+    "file_name": "/u/jhu11/dataset/std_isar_premises.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "std_isar_premises_sorry": {
+    "file_name": "/u/jhu11/dataset/std_isar_premises_sorry.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "afp_isar_premises_sorry": {
+    "file_name": "/u/jhu11/dataset/afp_isar_premises_sorry.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "afp_apply_premises": {
+    "file_name": "/u/jhu11/dataset/afp_apply_premises.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+  "afp_isar_premises": {
+    "file_name": "/u/jhu11/dataset/afp_isar_premises.json",
+    "columns": {
+      "prompt" : "prompt",
+      "response": "proof"
+    }
+  },
+    "std_spec_RQ1": {
+    "file_name": "/u/jhu11/spec_synthesis/std_spec_factory_training_RQ1.json",
+    "columns": {
+      "prompt" : "instruction",
+      "response": "output"
+    }
+  },
+      "std_spec_RQ3": {
+    "file_name": "/u/jhu11/spec_synthesis/std_spec_factory_training_RQ3.json",
+    "columns": {
+      "prompt" : "instruction",
+      "response": "output"
+    }
+  },
+
   "identity": {
     "file_name": "identity.json"
   },
@@ -58,21 +175,6 @@
     "columns": {
       "messages": "messages",
       "videos": "videos"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "mllm_video_audio_demo": {
-    "file_name": "mllm_video_audio_demo.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "videos": "videos",
-      "audios": "audios"
     },
     "tags": {
       "role_tag": "role",
@@ -274,7 +376,7 @@
     "tags": {
       "role_tag": "role",
       "content_tag": "content",
-      "user_tag": "user",
+      "user_tag": "human",
       "assistant_tag": "assistant"
     }
   },
@@ -527,16 +629,6 @@
       "rejected": "rejected"
     }
   },
-  "coig_p": {
-    "hf_hub_url": "m-a-p/COIG-P",
-    "ranking": true,
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "chosen": "chosen",
-      "rejected": "rejected"
-    }
-  },
   "rlhf_v": {
     "hf_hub_url": "llamafactory/RLHF-V",
     "ranking": true,
@@ -557,16 +649,6 @@
       "chosen": "chosen",
       "rejected": "rejected",
       "images": "images"
-    }
-  },
-  "rlaif_v": {
-    "hf_hub_url": "openbmb/RLAIF-V-Dataset",
-    "ranking": true,
-    "columns": {
-      "prompt": "question",
-      "chosen": "chosen",
-      "rejected": "rejected",
-      "images": "image"
     }
   },
   "orca_pairs": {
@@ -642,7 +724,7 @@
     }
   },
   "c4_demo": {
-    "file_name": "c4_demo.jsonl",
+    "file_name": "c4_demo.json",
     "columns": {
       "prompt": "text"
     }
