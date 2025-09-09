@@ -1,0 +1,5 @@
+model_name_or_path: EleutherAI/llemma_7b
+adapter_name_or_path: /u/jhu11/projects/saves/llemma-7b-3epoch-r32-e4-RQ1/lora/sft
+template: llama3
+infer_backend: huggingface  # choices: [huggingface, vllm]
+trust_remote_code: true
